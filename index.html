@@ -28,6 +28,23 @@
     </style>
   </head>
   <body>
-    <div class="rj">ROJDA SULTANNNNNN</div>
+    <div class="rj" onclick="changeColor(event)">ROJDA SULTANNNNNN</div>
+
+    <script>
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function changeColor(event) {
+        const randomColor = getRandomColor();
+        event.target.style.color = randomColor;
+      }
+    </script>
   </body>
 </html>
+
